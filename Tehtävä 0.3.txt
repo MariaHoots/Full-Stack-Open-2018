@@ -1,0 +1,22 @@
+title Tehtävä 0.3
+
+käyttäjä->selain:
+note right of käyttäjä
+kirjoittaa osoiteriviin https://fullstack-exampleapp.herokuapp.com/notes
+end note
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/notes
+note left of palvelin
+muodostetaan HTML
+end note
+palvelin->selain:status 200, HTML code
+selain->palvelin: GET fullstack-exampleapp.herokuapp.com/main.css
+palvelin->selain:status 200, CSS code
+selain->palvelin: GET fullstack-exampleapp.herokuapp.com/main.js
+palvelin->selain:status 200, JS code
+selain->palvelin: GET fullstack-exampleapp.herokuapp.com/data.json
+palvelin->selain:status 200, JSON code
+selain->käyttäjä:
+note left of selain
+ selain näyttää palvelimen palauttaman HTML:n
+ johon on upotettu palvelimelta haetut tiedot
+end note
